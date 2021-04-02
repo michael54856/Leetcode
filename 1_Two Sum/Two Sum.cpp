@@ -5,47 +5,18 @@ public:
     {
         vector<int> ans;
         unordered_map<int,int> m;
-        unordered_map<int, int>::iterator iter;
-
-        for(int i = 0; i < nums.size(); i++)
+        int len = nums.size();
+        for(int i = 0; i < len; i++)
         {
-            if(nums[i] == target - nums[i])
+            int another = target - nums[i];
+            if(m.find(another) != m.end())
             {
-                iter = m.find(nums[i]);
-                if(iter != m.end())
-                {
-                    ans.push_back(iter->second);
-                    ans.push_back(i);
-                    return ans;
-                }
+                ans.push_back(m[another]);
+                ans.push_back(i);
+                return ans;
             }
-
             m[nums[i]] = i;
         }
-        for(int i = 0; i < nums.size(); i++)
-        {
-            int t = target - nums[i];
-            if(t != nums[i])
-            {
-                iter = m.find(t);
-                if(iter == m.end())//no such number
-                {
-                    continue;
-                }
-                else
-                {
-                    ans.push_back(i);
-                    ans.push_back(iter->second);
-                    break;
-                }
-            }
-            else
-            {
-                continue;
-            }
-        }
-
-
         return ans;
     }
 };
