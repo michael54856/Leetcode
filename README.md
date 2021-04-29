@@ -1,2 +1,2 @@
 # Leetcode
-Record my problem solving of leetcode
+Record my problem solving on leetcode
