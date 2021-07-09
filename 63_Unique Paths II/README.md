@@ -16,7 +16,7 @@
 
 後面建立array來去當作dp的存取,速度就快上了好幾倍
 
-##Better DP
+## Better DP
 
 後面看Discuss後看到一個更好的寫法
 
