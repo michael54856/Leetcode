@@ -1,49 +1,15 @@
-class Solution
-{
+class Solution {
 public:
-    vector<string> wordSubsets(vector<string>& A, vector<string>& B)
+    int distributeCandies(vector<int>& candyType)
     {
-        short dic[26] = {};
-        int B_len = B.size();
-        for(int i = 0; i < B_len; i++)
-        {
-            short tempDic[26] = {};
-            for(int j = 0; j < B[i].size(); j++)
-            {
-                tempDic[B[i][j]-'a']++;
-            }
-            for(int j = 0; j < 26; j++)
-            {
-                if(tempDic[j] > dic[j])
-                {
-                    dic[j] = tempDic[j];
-                }
-            }
-        }
-        vector<string> ans;
-        int len = A.size();
+        int len = candyType.size();
+        unordered_set<int> type;
         for(int i = 0; i < len; i++)
         {
-            short A_Dic[26] = {};
-            for(int j = 0; j < A[i].size(); j++)
-            {
-                A_Dic[A[i][j]-'a']++;
-            }
-            bool flag = false;
-            for(int j = 0; j < 26; j++)
-            {
-                if(A_Dic[j] < dic[j])
-                {
-                    flag = true;
-                    break;
-                }
-            }
-
-            if(flag == false)
-            {
-                ans.push_back(A[i]);
-            }
+            type.insert(candyType[i]);
         }
-        return ans;
+        int a = type.size();
+        int b = len/2;
+        return min(a,b);
     }
 };
