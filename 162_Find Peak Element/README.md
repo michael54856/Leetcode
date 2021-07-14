@@ -15,4 +15,11 @@
 
 我們可以看一下圖,其中不同顏色的線為各種預測線型,可發現不管怎麼畫都會有peak
 
+## [mid] < [mid+1]
+
+![image](https://github.com/michael54856/Leetcode/blob/main/162_Find%20Peak%20Element/des1.png)
+
+## [mid] > [mid+1]
+
+![image](https://github.com/michael54856/Leetcode/blob/main/162_Find%20Peak%20Element/des2.png)
 
