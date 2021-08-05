@@ -1,0 +1,6 @@
+## 解題
+這邊會用dfs的方式去遍歷所有到leaf的路徑
+
+途中會計算出這條路徑中每個點的prefixSum,假如我這個點的prefixSum是x,那麼如果路徑中有個點的prefixSum是y,使 x-y=targetSum,那麼pathSum就加1
+
+要注意的是,可能不只一個點會是y,再來我們要使用map來存取資料,在一開始進入dfs時就要先把prefixSum=0加進去,當我們這個點走訪完時,要把該點的prefixSum去除
