@@ -1,5 +1,5 @@
 ## 解題
-![image](https://github.com/michael54856/Leetcode/blob/main/4_Median%20of%20Two%20Sorted%20Arrays/strategy.jpg)
+![image](https://github.com/michael54856/Leetcode/blob/main/0004_Median%20of%20Two%20Sorted%20Arrays/strategy.jpg)
 
 如上圖,數列A有n1個elements,而數列B有n2個elements
 
