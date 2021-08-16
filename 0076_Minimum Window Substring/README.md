@@ -1,7 +1,7 @@
 ## 解題
 標準sliding window的題目
 
-首先我會先建立**sCounting[128]**與**tCounting[128]**代表s與t的字元出現次數(因為ascii的範圍所以設128)
+首先我會先建立**sCounting[128],tCounting[128]**代表s與t的字元出現次數(因為ascii的範圍所以設128)
 
 一開始先遍歷t,把tCount建立好
 
@@ -13,7 +13,7 @@
 
 一開始先把r與l設成0,r會往右邊移動,直到matchCount = t.size(),也就是形成一個符合題意的window substring
 
-過程中如果遇到t也有出現的字元**sCounting[s[r]]**就會加一,如果**(sCounting[s[r]] < tCounting[s[r]])**代表是一個關鍵的字元,matchCount就加一
+過程中如果遇到t也有出現的字元sCounting[s[r]]就會加一,如果(sCounting[s[r]] < tCounting[s[r]])代表是一個關鍵的字元,matchCount就加一
 
 而當matchCount = t.size()時,我的l也會開始往右移動,過程中如果遇到t沒出現的字元就直接跳過,如果遇到t出現的字元,會有兩種情況
 
