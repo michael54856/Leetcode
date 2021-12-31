@@ -1,0 +1,4 @@
+## 解題
+透過dfs去取得subTree的maxValue與minValue
+
+最大的差值只有可能與maxValue或minValue而來
